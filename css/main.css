@@ -37,6 +37,11 @@ a {
     margin-bottom: 1rem;
 }
 
+input[type=text] {
+    position: absolute;
+    left: -5000px;
+}
+
 .blink {
     color: red;
     animation: blink-animation 1s steps(5, start) infinite;

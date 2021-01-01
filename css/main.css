@@ -43,17 +43,19 @@ input[type=text] {
 }
 
 .blink {
-    color: red;
-    animation: blink-animation 1s steps(5, start) infinite;
-    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    animation: blinking-animation 2s steps(200, start) infinite;
  }
-@keyframes blink-animation {
-    to {
-      visibility: hidden;
+@keyframes blinking-animation {
+    0% {
+        transform: translateX(10%);
+        color: red;
     }
-}
-@-webkit-keyframes blink-animation {
-    to {
-      visibility: hidden;
+    50% {
+        transform: translateX(-10%);
+        color: blue;
+    }
+    100% {
+        transform: translateX(10%);
+        color: green;
     }
 }

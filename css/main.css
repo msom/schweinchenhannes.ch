@@ -4,9 +4,9 @@ body {
 }
 
 section {
-    margin: 4rem;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    margin: 2rem 4rem;
+    padding: 1rem 2rem;
+    background-color: rgba(150, 150, 150, 0.7);
     border-radius: 7px;
 }
 
@@ -18,6 +18,7 @@ img {
 
 h2 {
     text-align: center;
+    font-weight: normal;
 }
 
 h3 {
@@ -29,33 +30,12 @@ p {
 }
 
 a {
-    color: inherit;
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .grid-x {
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-
-input[type=text] {
-    position: absolute;
-    left: -5000px;
-}
-
-.blink {
-    animation: blinking-animation 2s steps(200, start) infinite;
- }
-@keyframes blinking-animation {
-    0% {
-        transform: translateX(10%);
-        color: red;
-    }
-    50% {
-        transform: translateX(-10%);
-        color: blue;
-    }
-    100% {
-        transform: translateX(10%);
-        color: green;
-    }
 }

@@ -1,8 +1,8 @@
-title: Beim Bergsteigen
+title: Im Papiliorama
 ---
 pub_date: 2021-08-12
 ---
-description: Schweinchen Hannes macht eine Bergtour.
+description: Schweinchen Hannes besucht die Schmetterlinge im Papiliorama Kerzers.
 ---
 details:
 
@@ -14,6 +14,10 @@ details:
 - Illustrationen: Jede zweite Seite farbig illustriert
 - Genre: Vor- und Mitlesen
 ---
-price: 5
+price:
 ---
 new: yes
+---
+body:
+
+Das Büchlein gibt es exklusiv im Shop des [Papiliorama Kerzers](https://www.papiliorama.ch/)!

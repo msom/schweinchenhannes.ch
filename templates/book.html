@@ -16,7 +16,8 @@
                 <p class="label">Vorderseite</p>
             </div>
             <div class="cell large-6">
-                <h2>{{ this.body }}</h2>
+                <h2>{{ this.description }}</h2>
+                {{ this.body }}
                 {% if this.price %}
                 <p>Möchtest Du das Büchlein für CHF {{ this.price }}.-? Dann schreib mir doch ein <a href="mailto:hannes@schweinchenhannes.ch">Mail</a>!</p>
                 {% endif %}
@@ -25,7 +26,7 @@
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
                 <img src="{{ this.attachments.get('content.jpg').thumbnail(900)|url }}">
-                <p class="label">Seiten 2 und 3</p>
+                <p class="label">Beispieldoppelseite</p>
             </div>
         </div>
         <div class="grid-x grid-margin-x">

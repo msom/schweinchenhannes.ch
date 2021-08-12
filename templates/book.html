@@ -18,8 +18,12 @@
             <div class="cell large-6">
                 <h2>{{ this.description }}</h2>
                 {{ this.body }}
-                {% if this.price %}
-                <p>Möchtest Du das Büchlein für CHF {{ this.price }}.-? Dann schreib mir doch ein <a href="mailto:hannes@schweinchenhannes.ch">Mail</a>!</p>
+                {% if this.epubli or this.amazon %}
+                <p>Kaufe das Büchlein auf:<br>
+                    {% if this.epubli and this.epubli.url %}<a target="_blank" href="{{ this.epubli }}">epubli</a><br>{% endif %}
+                    {% if this.amazon and this.amazon.url %} <a target="_blank" href="{{ this.amazon }}">amazon</a><br>{% endif %}
+                </p>
+                <p>Die Büchlein werden erst <strong>bei Bestellung hergestellt</strong>. Das schont die Umwelt, ist jedoch leider etwas teurer!</p>
                 {% endif %}
             </div>
         </div>

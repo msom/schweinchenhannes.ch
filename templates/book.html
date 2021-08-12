@@ -23,6 +23,9 @@
                     {% if this.epubli and this.epubli.url %}<a target="_blank" href="{{ this.epubli }}">epubli</a><br>{% endif %}
                     {% if this.amazon and this.amazon.url %} <a target="_blank" href="{{ this.amazon }}">amazon</a><br>{% endif %}
                 </p>
+                {% if this.isbn %}
+                <p>ISBN: {{ this.isbn }}<br></p>
+                {% endif %}
                 <p>Die Büchlein werden erst <strong>bei Bestellung hergestellt</strong>. Das schont die Umwelt, ist jedoch leider etwas teurer!</p>
                 {% endif %}
             </div>

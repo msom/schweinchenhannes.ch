@@ -16,7 +16,7 @@
                   <a href="{{ child|url }}"><img src="{{ child.attachments.get('front.jpg').thumbnail(300)|url }}"></a>
               </div>
               <div class="cell large-6">
-                  <h2><a href="{{ child|url }}">{{ child.title }}</a></h2>
+                  <h2><a href="{{ child|url }}">{{ child.title }}</a> {%if child.new %} <span class="blink">neu!</span>{% endif %}</h2>
                   <h3>{{ child.body }}</h3>
               </div>
           </div>

@@ -31,7 +31,7 @@
                 <h2>Ich bin ziemlich berühmt, denn mit mir gibt es bereits einige <a href="{{ '/buechlein'|url }}">Büchlein:</a></h2>
                 <p>
                 {% for child in this.children.get('buechlein').children %}
-                <a href="{{ child|url }}">{{ child.title }}</a><br>
+                <a href="{{ child|url }}">{{ child.title }}</a>{%if child.new %} <span class="blink">neu!</span>{% endif %}<br>
                 {% endfor %}
                 </p>
             </div>

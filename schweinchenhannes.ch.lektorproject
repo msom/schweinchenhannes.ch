@@ -1,2 +1,5 @@
 [project]
 name = schweinchenhannes.ch
+
+[servers.ghpages]
+target = ghpages://msom/schweinchenhannes.ch

@@ -44,3 +44,15 @@ a {
     text-align: center;
     font-style: italic;
 }
+
+.blink {
+    color: red;
+    font-weight: bold;
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    40% {
+        opacity: 0;
+    }
+}

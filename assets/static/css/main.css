@@ -45,6 +45,11 @@ a {
     font-style: italic;
 }
 
+.navigation {
+    font-size: 2rem;
+    margin: 1em;
+}
+
 .blink {
     color: red;
     font-weight: bold;

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+{% set prev = this.parent.children.filter(F._id==(this._id|int - 1)|string).first() %}
+{% set next = this.parent.children.filter(F._id==(this._id|int + 1)|string).first() %}
+<section>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-12">
+                <img src="{{ this.attachments.first().thumbnail(600)|url }}">
+                <p>
+                {% if prev %}
+                    <a class="navigation" href="{{ prev|url }}">&lt;</a>
+                {% endif %}
+                {% if next %}
+                    <a class="navigation" href="{{ next|url }}">&gt;</a>
+                {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

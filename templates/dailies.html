@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% for child in this.children %}
+  <section>
+      <div class="grid-container">
+          <div class="grid-x grid-margin-x">
+              <div class="cell large-12">
+                  <a href="{{ child|url }}"><img src="{{ child.attachments.first().thumbnail(300)|url }}"></a>
+              </div>
+          </div>
+      </div>
+  </section>
+  {% endfor %}
+{% endblock %}

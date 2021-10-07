@@ -30,9 +30,10 @@
             <div class="cell large-6">
                 <h2>Ich bin ziemlich berühmt, denn mit mir gibt es bereits einige <a href="{{ '/buechlein'|url }}">Büchlein:</a></h2>
                 <p>
-                {% for child in this.children.get('buechlein').children %}
+                {% for child in this.children.get('buechlein').children.limit(6) %}
                 <a href="{{ child|url }}">{{ child.title }}</a>{%if child.new %} <span class="blink">neu!</span>{% endif %}<br>
                 {% endfor %}
+                <a href="{{ '/buechlein'|url }}">...</a>
                 </p>
             </div>
         </div>

@@ -33,7 +33,7 @@
                 {% for child in this.children.get('buechlein').children.limit(6) %}
                 <a href="{{ child|url }}">{{ child.title }}</a>{%if child.new %} <span class="blink">neu!</span>{% endif %}<br>
                 {% endfor %}
-                <a href="{{ '/buechlein'|url }}">...</a>
+                ... und viele mehr <a href="{{ '/buechlein'|url }}">[hier]</a>
                 </p>
             </div>
         </div>

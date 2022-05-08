@@ -2,7 +2,7 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <title>Schweinchen Hannes - {{ this.title }}</title>
+        <title>{% block title %}Schweinchen Hannes{% if this.title %} - {% endif %}{{ this.title }}{% endblock %}</title>
         <meta name="description" content="Schweinchen Hannes">
         <meta name="author" content="Valérie Bürgy, Marc Sommerhalder">
         <link rel="stylesheet" href="{{ '/static/css/foundation.min.css'|asseturl }}">

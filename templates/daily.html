@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% block title %}Schweinchen Hannes - {{ this.parent.title }} - {{ this._id }}{% endblock %}
 {% block body %}
 {% set prev = this.parent.children.filter(F._id=='%03d' % (this._id|int - 1)).first() %}
 {% set next = this.parent.children.filter(F._id=='%03d' % (this._id|int + 1)).first() %}
@@ -10,10 +11,11 @@
                 <img src="{{ this.attachments.first().thumbnail(600)|url }}">
                 <p>
                 {% if prev %}
-                    <a class="navigation" href="{{ prev|url }}#content">&lt;</a>
+                    <a class="navigation" href="{{ prev|url }}#content">&#8678;</a>
                 {% endif %}
+                <a class="navigation" href="{{ this.parent|url }}#content">&#x22ee;</a>
                 {% if next %}
-                    <a class="navigation" href="{{ next|url }}#content">&gt;</a>
+                    <a class="navigation" href="{{ next|url }}#content">&#8680;</a>
                 {% endif %}
                 </p>
             </div>

@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Schweinchen Hannes - {{ this.parent.title }} - {{ this._id }}{% endblock %}
+{% block title %}Schweinchen Hannes - {{ this.parent.title }} - {{ this._id }}: {{ this.title }}{% endblock %}
 {% block body %}
 {% set prev = this.parent.children.filter(F._id=='%03d' % (this._id|int - 1)).first() %}
 {% set next = this.parent.children.filter(F._id=='%03d' % (this._id|int + 1)).first() %}
@@ -8,7 +8,7 @@
     <div class="grid-container" id="content" >
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
-                <img src="{{ this.attachments.first().thumbnail(600)|url }}">
+                <img src="{{ this.attachments.first().thumbnail(600)|url }}" alt="{{ this.title }}">
                 <p>
                 {% if prev %}
                     <a class="navigation" href="{{ prev|url }}#content">&#8678;</a>

@@ -5,7 +5,7 @@
       <div class="grid-container">
           <div class="grid-x grid-margin-x">
               <div class="cell large-12">
-                  <a href="{{ child|url }}"><img src="{{ child.attachments.first().thumbnail(300)|url }}"></a>
+                  <a href="{{ child|url }}"><img src="{{ child.attachments.first().thumbnail(300)|url }}" alt="{{ child.title }}"></a>
               </div>
           </div>
       </div>

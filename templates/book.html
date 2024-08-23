@@ -30,14 +30,12 @@
                 {% endif %}
             </div>
         </div>
-        {% if this.attachments.get('content.jpg') %}
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
                 <img src="{{ this.attachments.get('content.jpg').thumbnail(900)|url }}">
                 <p class="label">Beispieldoppelseite</p>
             </div>
         </div>
-        {% endif %}
         <div class="grid-x grid-margin-x">
             <div class="cell large-6 small-order-1 large-order-2">
                 <img src="{{ this.attachments.get('back.jpg').thumbnail(400)|url }}">
